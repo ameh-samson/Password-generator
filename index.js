@@ -97,10 +97,23 @@ let generatePasswordBtn = document.querySelector("#generate-passwords-btn");
 let passwordElOne = document.querySelector("#password-el-one");
 let passwordElTwo = document.querySelector("#password-el-two");
 
-generatePasswordBtn.addEventListener("click", generatePasswords);
+generatePasswordBtn.addEventListener("click", generateRandomPasswords);
 
-function generatePasswords() {
-  let randomIndex = Math.floor(Math.random() * 15 + 1);
+let passwordLength = 12;
 
-  passwordElOne.textContent = characters[randomIndex];
+function getRandomChar() {
+  let randomChar = Math.floor(Math.random() * characters.length);
+  return characters[randomChar];
+}
+
+function generateRandomPasswords() {
+  let randomPasswordOne = "";
+  let randomPasswordTwo = "";
+
+  for (let i = 0; i < passwordLength; i++) {
+    randomPasswordOne += getRandomChar();
+    randomPasswordTwo += getRandomChar();
+  }
+  passwordElOne.textContent = randomPasswordOne;
+  passwordElTwo.textContent = randomPasswordTwo;
 }
