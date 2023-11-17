@@ -63,6 +63,8 @@ button {
   background: #10b981;
   font-weight: 500;
   padding: 9px 15px;
+  width: 191px;
+  height: 42px;
   border: none;
   border-radius: 6px;
   box-shadow: 0px 1px 2px #0000000d;
@@ -81,13 +83,19 @@ hr {
 
 .generated-password {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  width: 446px;
+  height: 39px;
 }
 
 .generated-passwords {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 32px;
   font-weight: 500;
   color: #55f991;
   background: #273549;
-  padding: 10px 48px;
   border-radius: 6px;
 }
