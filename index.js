@@ -91,3 +91,16 @@ const characters = [
   "?",
   "/",
 ];
+
+let generatePasswordBtn = document.querySelector("#generate-passwords-btn");
+
+let passwordElOne = document.querySelector("#password-el-one");
+let passwordElTwo = document.querySelector("#password-el-two");
+
+generatePasswordBtn.addEventListener("click", generatePasswords);
+
+function generatePasswords() {
+  let randomIndex = Math.floor(Math.random() * 15 + 1);
+
+  passwordElOne.textContent = characters[randomIndex];
+}
